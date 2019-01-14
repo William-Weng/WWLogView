@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9md-vx-oCb">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Log View Controller-->
+        <scene sceneID="yMe-jX-ERF">
+            <objects>
+                <viewController storyboardIdentifier="WWLogViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="9md-vx-oCb" customClass="WWLogViewController" customModule="WWLogView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" alpha="0.69999999999999996" contentMode="scaleToFill" id="KBS-UW-HVJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="n69-EW-n9J">
+                                <rect key="frame" x="4" y="4" width="367" height="627"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="zoom" translatesAutoresizingMaskIntoConstraints="NO" id="DcC-41-qFQ">
+                                <rect key="frame" x="343" y="635" width="32" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="DcC-41-qFQ" secondAttribute="height" multiplier="1:1" id="Hx0-B2-Jts"/>
+                                    <constraint firstAttribute="width" constant="32" id="SRb-S5-SQr"/>
+                                </constraints>
+                            </imageView>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clear" translatesAutoresizingMaskIntoConstraints="NO" id="jfp-Ea-c1K">
+                                <rect key="frame" x="0.0" y="635" width="32" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="32" id="2Gg-GO-8X4"/>
+                                    <constraint firstAttribute="width" secondItem="jfp-Ea-c1K" secondAttribute="height" id="o4F-jY-pzu"/>
+                                </constraints>
+                            </imageView>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="William-Weng" translatesAutoresizingMaskIntoConstraints="NO" id="Wps-cj-liU">
+                                <rect key="frame" x="171.5" y="635" width="32" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="32" id="8ue-JA-mOq"/>
+                                    <constraint firstAttribute="width" secondItem="Wps-cj-liU" secondAttribute="height" id="I2u-Gp-NvQ"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="q9P-f9-OlL" firstAttribute="bottom" secondItem="DcC-41-qFQ" secondAttribute="bottom" id="06Z-bX-thx"/>
+                            <constraint firstItem="DcC-41-qFQ" firstAttribute="top" secondItem="n69-EW-n9J" secondAttribute="bottom" constant="4" id="2Zn-dH-hft"/>
+                            <constraint firstItem="jfp-Ea-c1K" firstAttribute="bottom" secondItem="q9P-f9-OlL" secondAttribute="bottom" id="43C-Qy-xSA"/>
+                            <constraint firstItem="jfp-Ea-c1K" firstAttribute="leading" secondItem="q9P-f9-OlL" secondAttribute="leading" id="Hk4-pk-9H0"/>
+                            <constraint firstItem="q9P-f9-OlL" firstAttribute="trailing" secondItem="DcC-41-qFQ" secondAttribute="trailing" id="RHS-F0-0j9"/>
+                            <constraint firstItem="Wps-cj-liU" firstAttribute="bottom" secondItem="q9P-f9-OlL" secondAttribute="bottom" id="cq6-JD-hQu"/>
+                            <constraint firstItem="Wps-cj-liU" firstAttribute="centerX" secondItem="KBS-UW-HVJ" secondAttribute="centerX" id="diX-Af-0Ui"/>
+                            <constraint firstItem="q9P-f9-OlL" firstAttribute="trailing" secondItem="n69-EW-n9J" secondAttribute="trailing" constant="4" id="fw6-e0-50c"/>
+                            <constraint firstItem="n69-EW-n9J" firstAttribute="leading" secondItem="q9P-f9-OlL" secondAttribute="leading" constant="4" id="hfu-8K-ptb"/>
+                            <constraint firstItem="n69-EW-n9J" firstAttribute="top" secondItem="KBS-UW-HVJ" secondAttribute="top" constant="4" id="syH-8k-URN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="q9P-f9-OlL"/>
+                    </view>
+                    <connections>
+                        <outlet property="clearView" destination="jfp-Ea-c1K" id="IWk-Kw-p7O"/>
+                        <outlet property="dragView" destination="KBS-UW-HVJ" id="v84-Pk-h8E"/>
+                        <outlet property="logTextView" destination="n69-EW-n9J" id="XXH-K8-j9h"/>
+                        <outlet property="testView" destination="Wps-cj-liU" id="Mfp-qS-stI"/>
+                        <outlet property="zoomView" destination="DcC-41-qFQ" id="Zxz-Wz-6Nc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2yF-cy-c7m" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-280.80000000000001" y="29.23538230884558"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="William-Weng" width="60" height="59"/>
+        <image name="clear" width="60" height="60"/>
+        <image name="zoom" width="60" height="60"/>
+    </resources>
+</document>

@@ -1,0 +1,11 @@
+framework module WWLogView {
+  umbrella header "WWLogView.h"
+
+  export *
+  module * { export * }
+}
+
+module WWLogView.Swift {
+    header "WWLogView-Swift.h"
+    requires objc
+}
